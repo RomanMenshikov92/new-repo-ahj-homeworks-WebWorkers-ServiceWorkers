@@ -1,5 +1,9 @@
 # Домашнее задание к занятию "12. WebWorkers, ServiceWorkers"
 
+### [github-pages-loading-Styling](https://romanmenshikov92.github.io/new-repo-ahj-homeworks-webworkers-serviceworkers/)
+
+[![Build status](https://ci.appveyor.com/api/projects/status/qga1ksu1a722m2lc?svg=true)](https://ci.appveyor.com/project/RomanMenshikov92/new-repo-ahj-homeworks-webworkers-serviceworkers)
+
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ можно использовать любой менеджер пакетов
