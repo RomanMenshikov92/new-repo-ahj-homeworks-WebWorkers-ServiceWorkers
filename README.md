@@ -1,6 +1,6 @@
 # Домашнее задание к занятию "12. WebWorkers, ServiceWorkers"
 
-### [github-pages-loading-Styling](https://romanmenshikov92.github.io/new-repo-ahj-homeworks-webworkers-serviceworkers/)
+### [github-pages-loading-Styling](https://romanmenshikov92.github.io/new-repo-ahj-homeworks-WebWorkers-ServiceWorkers/)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/qga1ksu1a722m2lc?svg=true)](https://ci.appveyor.com/project/RomanMenshikov92/new-repo-ahj-homeworks-webworkers-serviceworkers)
 
@@ -12,7 +12,6 @@
 4. В качестве результата присылайте проверяющему ссылки на ваши GitHub-проекты
 5. Авто-тесты писать не требуется
 6. Серверная часть должна быть выложена на [Render](https://render.com/). Посмотрите [инструкцию](https://github.com/netology-code/ahj-homeworks/tree/video/docs/render#readme) или [документацию](https://render.com/docs/deploy-node-express-app), как развертывать серверную часть на Render.
-
 
 ---
 
@@ -38,7 +37,7 @@
 
 ---
 
-### Hasher* (задача со звёздочкой)
+### Hasher\* (задача со звёздочкой)
 
 Важно: эта задача не является обязательной. Её (не)выполнение не влияет на получение зачёта по ДЗ.
 
@@ -60,18 +59,20 @@
 
 Файлы могут загружаться как выбором (при клике на область должен открываться стандартный интерфейс выбора файла в браузере), так и DnD.
 
-Поскольку ваш виджет в дальнейшем могут захотеть использовать в составе других интерфейсов, крайне нежелательно, чтобы загрузка файла и расчёт контрольной суммы приводили к зависанию интерфейса.  Поэтому их необходимо вынести в Web Worker. 
+Поскольку ваш виджет в дальнейшем могут захотеть использовать в составе других интерфейсов, крайне нежелательно, чтобы загрузка файла и расчёт контрольной суммы приводили к зависанию интерфейса. Поэтому их необходимо вынести в Web Worker.
 
 Функции crypto-js требуют объекты специального внутреннего формата `WordArray`. Получить из `ArrayBuffer` его и рассчитать хэш можно с помощью следующего кода:
+
 ```javascript
 const wordArray = crypto.lib.WordArray.create(<array buffer here>);
 const hash = crypto.MD5(wordArray).toString(crypto.enc.Hex);
 ```
 
 `hash` - и есть полученная контрольная сумма, рассчитанная по алгоритму MD5. Вам, естественно, нужно сделать поддержку не только MD5, а ещё и:
-* crypto-js/sha1
-* crypto-js/sha256
-* crypto-js/sha512
+
+- crypto-js/sha1
+- crypto-js/sha256
+- crypto-js/sha512
 
 Продумайте, как вы будете проверять, что ваше приложение считает хэш правильно.
 
